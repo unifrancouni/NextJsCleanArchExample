@@ -8,12 +8,14 @@ export default function TextInput({
     setter,
     type = 'text',
     validate,
+    errorMessage,
 }: {
     name: string
     label: string
     setter: Function
     type?: InputType
     validate?: Function
+    errorMessage?: string
 }) {
     const [isValidState, setIsValidState] = useState(true)
 
@@ -37,20 +39,21 @@ export default function TextInput({
         <>
             {/* Label */}
             <Row className="mx-0 mt-2">
-                <Col className="col-3">
+                <Col>
                     <Label>{label}</Label>
                 </Col>
             </Row>
 
             {/* Input */}
             <Row className="mx-0 mt-0">
-                <Col className="col-3">
+                <Col>
                     <Input
                         name={name}
                         type={type}
                         onChange={(evt) => setStateHandler(evt.target.value)}
                         invalid={!isValidState}
                     ></Input>
+                    {!isValidState && <span>{errorMessage}</span>}
                 </Col>
             </Row>
         </>

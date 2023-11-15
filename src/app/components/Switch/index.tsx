@@ -15,12 +15,12 @@ export default function Switch({
     return (
         <>
             <Row className="mx-0 mt-2">
-                <Col className="col-3">
+                <Col>
                     <Label> {label} </Label>
                 </Col>
             </Row>
             <Row className="mx-0">
-                <Col className="col-3">
+                <Col>
                     <FormGroup switch>
                         <Input
                             name={name}

@@ -28,7 +28,7 @@ class Person {
             firstName: this.firstName.value,
             lastName: this.lastName.value,
             email: this.email.value,
-            dateOfBirth: this.dateOfBirth.value,
+            dateOfBirth: this.dateOfBirth.value.value,
             deceased: this.deceased,
         }
     }

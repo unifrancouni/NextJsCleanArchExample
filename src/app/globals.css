@@ -1,0 +1,13 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+    background: linear-gradient(rgb(5, 48, 238), #e805f0);
+}
+
+span {
+  color: #dc3545
+}
